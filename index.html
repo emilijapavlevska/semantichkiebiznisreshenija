@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Направи си јадење</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Направи си јадење</h1>
+  
+  <div class="controls">
+    <input type="text" id="ingredientInput" placeholder="Внеси состојка">
+    
+    <select id="categorySelect">
+        <option value="">All Categories</option>
+        <option value="Salad">Salad</option>
+        <option value="Sandwich">Sandwich</option>
+        <option value="Pasta">Pasta</option>
+        <option value="Dessert">Dessert</option>
+        <option value="Main Course">Main Course</option>
+        <option value="Soup">Soup</option>
+        <option value="Vegan">Vegan</option>
+        <option value="Breakfast">Breakfast</option>
+        <option value="Appetizer">Appetizer</option>
+      </select>
+           
+
+    <button onclick="searchRecipes()">Пребарувај</button>
+  </div>
+
+  <div id="results"></div>
+
+  <!-- Modal for detailed view -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <img id="modalImage" src="" alt="">
+      <p><b>Категорија:</b> <span id="modalCategory"></span></p>
+      <p><b>Калории:</b> <span id="modalCalories"></span></p>
+      <p><b>Состојки:</b></p>
+      <ul id="modalIngredients"></ul>
+      <p><b>Начин на подготовка:</b></p>
+      <p id="modalPreparation"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
